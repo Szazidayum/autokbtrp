@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+*{box-sizing: border-box;}
+
+main{
+    margin: auto;
+    max-width: 1600px;
+    display: grid;
+    grid-template-areas: "head head head"
+                        "nav nav nav"
+                        "art art asi"
+                        "foot foot foot";
+}
+header{
+    grid-area: head;
+}
+header h1{
+    color: rgb(0, 143, 119);
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    position: relative;
+    align-items: center;
+    grid-area: nav;
+    background-color: rgb(0, 143, 119);
+
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 100px 220px 180px;
+    list-style-type: none
+}
+nav li a{
+    color: rgb(125, 214, 199);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+article{
+    grid-area: art;
+ 
+    padding: 30px;
+}
+article p{
+    font-family: Arial, Helvetica, sans-serif;;
+}
+.contin{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+}
+.erdekesseg li{
+    list-style-type: decimal ;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    padding-bottom: 15px;
+}
+.leiras{
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 10px;
+    background-color: rgba(228, 228, 228, 0.822);
+}
+.leiras h3{
+    padding-left: 20px;
+    color: rgb(0, 143, 119);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.kep{
+    background-color: white;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    border-top: 1px solid rgb(209, 209, 209);
+    padding: 20px;
+    margin: auto;
+}
+.kep p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.kep img{
+    width: 100%;
+}
+aside{
+    grid-area: asi;
+    max-width: 400px;
+    padding: 30px;
+}
+aside img{
+    max-height: 180px;
+}
+.forma{
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 5px;
+    padding: 5px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  td{
+      border-bottom: 1px solid rgba(179, 179, 179, 0.603);
+  }
+  th{
+      border-bottom: 2px solid grey;
+  }
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+footer{
+    grid-area: foot;
+    color: rgb(0, 143, 119);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        display: grid;
+        grid-template-areas: "head"
+                            "nav"
+                            "art"
+                            "asi"
+                            "foot";
+    }
+  }
